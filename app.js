@@ -146,3 +146,40 @@
         return sheep.filter( i => i === true).length;
     }
 }
+
+{
+    // Mustaqil ishi
+    const Matematik = {
+        plus(a, b){
+            return a + b
+        },
+        minus(a, b){
+            return a - b
+        },
+        exist(a, b){
+            return a / b
+        },
+        increase(a, b){
+            return a * b
+        },
+        square(a, b){
+            return a ** b
+        },
+        module(num){
+           return num >= 0 ? num : -num
+        },
+        sum(...rest){
+            let sum = 0
+            for(let i of rest){
+                sum += i
+            }
+            return sum
+        },
+        pi(number){
+            p = 3,14
+            return number * p
+        }
+    }
+    console.log( Matematik.increase() );  
+}
+
