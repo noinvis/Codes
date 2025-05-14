@@ -148,6 +148,84 @@
 }
 
 {
+    // 16 - code (Hello, Name or World!)
+    // Sharti: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+    function hello(name) {
+        if (!name) {
+            return "Hello, World!";
+        } 
+        else {
+            let changed = name.toLowerCase().charAt(0).toUpperCase() + name.toLowerCase().slice(1);
+            return `Hello, ${changed}!`;
+        }
+    }
+}
+
+{
+    // 17 - code (String ends with?)
+    // Sharti: Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+    function solution(str, ending){
+        return str.endsWith(ending)
+    }
+}
+
+{
+    // 18 - code (Sum without highest and lowest number)
+    // Sharti: The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+    function sumArray(array) {
+        if(array == null || array.length == 2 || array.length == 1 || array.length == 0) return 0
+        return array.sort((a, b) => a - b).slice(1, -1).reduce((sum, num) => sum + num, 0)
+    }
+}
+
+{
+    // 19 - code (Sum of two lowest positive integers)
+    // Sharti: Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+    function sumTwoSmallestNumbers(numbers) {  
+        return numbers.sort((a, b) => b - a).slice(-2).reduce((sum, num) => sum + num) 
+    }
+}
+
+{
+    // 20 - code (Count of positives / sum of negatives)
+    // Sharti: Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+
+    function countPositivesSumNegatives(input) {
+        if (!input || input.length === 0) return []
+        let positiveCount = 0;
+        let negativeSum = 0;
+        for (let num of input) {
+            if (num > 0) return positiveCount++
+            else if (num < 0) return negativeSum += num;
+        }
+        return [positiveCount, negativeSum];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
     // Mustaqil ishi
     const Matematik = {
         plus(a, b){
