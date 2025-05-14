@@ -180,6 +180,5 @@
             return number * p
         }
     }
-    console.log( Matematik.increase() );  
 }
 
